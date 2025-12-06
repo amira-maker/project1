@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Home </title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        
+        body {
+            font-family: 'Lato';
+            background-color: #fdfdfd;
+        }
+
+        .main-navbar {
+            background-color: #ffffff;
+            padding: 20px 0;
+            text-align: center;
+            width: 100%;
+        }
+
+        .logo-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .logo-image {
+            height: 100px;
+            width: auto;
+            margin-bottom: 10px;
+        }
+
+        .tagline {
+            font-family: 'Cinzel';
+            font-size: 14px;
+            letter-spacing: 4px;
+            color: #555;
+            font-weight: 700;
+            text-align: center;
+            max-width: 90%;
+        }
+
+        .nav-links {
+            list-style: none;
+            padding: 0;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+            max-width: 900px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            font-weight: 700;
+            color: #333;
+            font-size: 13px;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #8b0000;
+        }
+
+        /* ------------------------------------
+           HERO MANUAL SLIDESHOW
+        ------------------------------------ */
+        .slideshow-container {
+            position: relative;
+            width: 100%;
+            height: 70vh;
+            overflow: hidden;
+        }
+
+        .slide {
+            display: none;
+            height: 100%;
+            width: 100%;
+        }
+
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Fade animation */
+        .fade {
+            animation: fadeEffect 0.7s ease-in-out;
+        }
+
+        @keyframes fadeEffect {
+            from { opacity: 0.4; }
+            to { opacity: 1; }
+        }
+
+        /* Arrows */
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            padding: 14px;
+            color: white;
+            font-weight: bold;
+            font-size: 28px;
+            background: rgba(0,0,0,0.4);
+            border-radius: 50%;
+            user-select: none;
+        }
+
+        .prev { left: 20px; }
+        .next { right: 20px; }
+
+        .prev:hover, .next:hover {
+            background: rgba(0,0,0,0.7);
+        }
+
+        /* ------------------------------------
+           INTRO SECTION
+        ------------------------------------ */
+        .intro-section {
+            padding: 60px 20px;
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .intro-section h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .intro-section p {
+            font-size: 18px;
+            line-height: 1.7;
+            color: #444;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <nav class="main-navbar">
+        <div class="logo-section">
+            <img src="images/logo.png" alt="Sakura Restaurant Logo" class="logo-image">
+            <span class="tagline">Taste Asia in one place - 1 Menu Many EXPERIENCES </span>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="home.html">HOME</a> </li>
+            <li><a href="about.html">ABOUT US</a></li>
+            <li><a href="chef's recommendations.html"> CHEF'S RECOMMENDATIONS</a> </li>
+            <li><a href="appetizers.html"> APPETIZERS </a> </li>
+            <li><a href="korean.html"> KOREAN </a> </li>
+            <li><a href="Chinese1.html"> CHINESE </a> </li>
+            <li><a href="Japanese.html"> JAPANESE </a> </li>
+            <li><a href="dessertsv2.html"> DESSERTS </a></li>
+            <li><a href="drinksv2.html"> DRINKS </a></li>
+        </ul>
+    </nav>
+
+    <!-- MANUAL SLIDESHOW -->
+    <section class="slideshow-container">
+
+        <div class="slide fade">
+            <img src="images/sushi.jpeg" alt="no image">
+        </div>
+
+        <div class="slide fade">
+            <img src="images/jjampong.jpg" alt="no image">
+        </div>
+
+        <div class="slide fade">
+            <img src="images/Korean bibimbap.jpg" alt="no image">
+        </div>
+
+        <div class="slide fade">
+            <img src="images/home4.jpeg" alt="no image">
+        </div>
+
+        <div class="slide fade">
+            <img src="images/home5.jpeg" alt="no image">
+        </div>
+
+        <div class="slide fade">
+            <img src="images/home6.jpeg" alt="no image">
+        </div>
+
+        <div class="slide fade">
+            <img src="images/home7.jpeg" alt="no image">
+        </div>
+
+        <!-- Arrows -->
+        <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+        <a class="next" onclick="changeSlide(1)">&#10095;</a>
+
+    </section>
+
+    <!-- INTRO SECTION -->
+    <section class="intro-section">
+        <h2>Discover the True Taste of Asia</h2>
+        <p>
+            Explore handcrafted drinks, Korean street flavors, Chinese classics, and Japanese comfort food — 
+            all in one modern special menu.
+        </p>
+    </section>
+
+    <!-- JAVASCRIPT FOR SLIDES -->
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function changeSlide(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function showSlides(n) {
+            let slides = document.getElementsByClassName("slide");
+
+            if (n > slides.length) { slideIndex = 1; }
+            if (n < 1) { slideIndex = slides.length; }
+
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+
+            slides[slideIndex - 1].style.display = "block";
+        }
+    </script>
+
+</body>
+</html>

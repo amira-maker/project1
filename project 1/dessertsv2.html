@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dessert Menu</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@400;700&family=Cookie&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: rgb(255, 250, 250); 
+            font-family: 'Quicksand';
+            color: rgb(122, 40, 70); 
+            
+            /* LAYOUT FIX: Stack elements vertically (Navbar top, Card bottom) */
+            display: flex;
+            flex-direction: column; 
+            align-items: center;
+        }
+
+        .main-navbar {
+            background-color: #ffffff;
+            padding: 20px 0;
+            text-align: center;
+            width: 100%;
+            
+        }
+
+        .nav-links {
+            list-style: none;
+            padding: 0;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            padding-top: 20px;
+            max-width: 600px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            font-family: 'Lato';
+            font-weight: 700;
+            color: #333;     
+            font-size: 13px;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #8b0000;
+        }
+        
+        .menu-card {
+            background-color: #fff;
+            width: 800px;
+            padding: 40px;
+            border-radius: 10px;
+            
+            /* Added margin to separate card from navbar and bottom of page */
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+
+        h1.title {
+            font-family: 'Cookie';
+            font-size: 80px;
+            text-align: center;
+            margin-bottom: 40px;
+            color: rgb(219, 112, 147); 
+        }
+
+        .images-wrapper {
+            display: flex;
+            gap: 50px; 
+        }
+
+        .pics-column {
+            flex: 1; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .pics-column img {
+            width: 150%;
+            max-width: 250px;
+            height: auto;
+            margin-bottom: -10px; 
+        }
+
+        .menu-list-column {
+            flex: 1.2; 
+        }
+
+        h2.category {
+            font-size: 24px;
+            font-weight: 700;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            color: rgb(122, 40, 70);
+        }
+
+        .menu-item {
+            display: flex;            
+            margin-bottom: 12px;     
+            font-size: 18px;
+        }
+
+        .item-name {
+            color: rgb(122, 40, 70);
+        }
+
+        .dots {
+            flex-grow: 1;            
+            border-bottom: 2px dotted rgb(244, 194, 194); 
+            margin: 0 10px;          
+            top: -5x;                
+        }
+
+        .item-price {
+            font-weight: 700;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <nav class="main-navbar">
+
+         <ul class="nav-links">
+            <li><a href="home.html">HOME</a></li>
+            <li><a href="about.html">ABOUT US</a></li>
+            <li><a href="chef's recommendations.html">CHEF'S RECOMMENDATIONS</a></li>
+         </ul>
+
+    </nav>
+    <div class="menu-card">
+        
+        <h1 class="title">Dessert Menu</h1>
+
+        <div class="images-wrapper">
+            
+            <div class="pics-column">
+                <img src="images/mochi.png" alt="mochi">
+                <img src="images/eggtarts.png" alt="egg tarts">
+                <img src="images/bingsu.png" alt="bingsu">
+            </div>
+
+            <div class="menu-list-column">
+
+                <h2 class="category">Japanese corner</h2>
+                
+                <div class="menu-item">
+                    <span class="item-name">Mochi Ice Cream</span>
+                    <span class="dots"></span>
+                    <span class="item-price">$4 </span>
+                </div>
+                
+                <div class="menu-item">
+                    <span class="item-name"> Dorayaki </span>
+                    <span class="dots"></span>
+                    <span class="item-price"> $6 </span>
+                </div>
+
+                <div class="menu-item">
+                    <span class="item-name"> Taiyaki </span>
+                    <span class="dots"></span>
+                    <span class="item-price"> $7</span>
+                </div>
+
+                <div class="menu-item">
+                    <span class="item-name"> Matcha Parfait </span>
+                    <span class="dots"></span>
+                    <span class="item-price"> $9 </span>
+                </div>
+
+                <div class="menu-item">
+                    <span class="item-name"> Japanese Cheesecake </span>
+                    <span class="dots"></span>
+                    <span class="item-price"> $8 </span>
+                </div>
+
+                <h2 class="category"> Chinese Corner </h2>
+
+                <div class="menu-item">
+                    <span class="item-name"> Egg Tarts </span>
+                    <span class="dots"></span>
+                    <span class="item-price">$5</span>
+                </div>
+
+                <div class="menu-item">
+                    <span class="item-name">Sesame Balls</span>
+                    <span class="dots"></span>
+                    <span class="item-price">$6</span>
+                </div>
+
+                <div class="menu-item">
+                    <span class="item-name">Mango Pudding</span>
+                    <span class="dots"></span>
+                    <span class="item-price">$7</span>
+                </div>
+
+                <div class="menu-item">
+                    <span class="item-name"> Almond Jelly </span>
+                    <span class="dots"></span>
+                    <span class="item-price">$6</span>
+                </div>
+
+                <div class="menu-item">
+                    <span class="item-name"> Tangyuan </span>
+                    <span class="dots"></span>
+                    <span class="item-price">$6</span>
+                </div>
+
+                <h2 class="category"> Korean Corner </h2>
+
+                <div class="menu-item">
+                    <span class="item-name">Bingsu </span>
+                    <span class="dots"></span>
+                    <span class="item-price">$10</span>
+                </div>
+
+                <div class="menu-item">
+                    <span class="item-name"> Sweet Potato Cake </span>
+                    <span class="dots"></span>
+                    <span class="item-price">$8</span>
+                </div>
+
+                <div class="menu-item">
+                    <span class="item-name"> Yakgwa </span>
+                    <span class="dots"></span>
+                    <span class="item-price">$8</span>
+                </div>
+
+                <div class="menu-item">
+                    <span class="item-name">Injeolmi Rice cake</span>
+                    <span class="dots"></span>
+                    <span class="item-price">$5</span>
+                </div>
+
+                <div class="menu-item">
+                    <span class="item-name">Hotteok</span>
+                    <span class="dots"></span>
+                    <span class="item-price">$6</span>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
