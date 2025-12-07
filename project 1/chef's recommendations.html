@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sakura - Chef's Recommendation</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body { font-family: 'Trebuchet MS', sans-serif; margin: 0; background: linear-gradient(180deg, #000000, #1a1a1a); color: white; }
+        header { background-color: #c1121f; color: white; padding: 15px; text-align: center; }
+        nav a { color: white; text-decoration: none; margin: 10px; font-weight: bold; }
+        nav a:hover { color: #fca311; }
+        main { padding: 30px; text-align: center; }
+        h2 { color: #fca311; }
+        .chef-note { background-color: #2b2b2b; padding: 20px; border-radius: 10px; width: 80%; margin: 0 auto 30px auto; box-shadow: 0 0 10px rgba(252,163,17,0.4); }
+        .dish-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+        .dish { background-color: #222; border-radius: 10px; padding: 15px; box-shadow: 0 0 10px rgba(252,163,17,0.2); transition: transform 0.3s, box-shadow 0.3s; }
+        .dish:hover { transform: scale(1.05); box-shadow: 0 0 20px rgba(252,163,17,0.5); }
+        .dish img { width: 100%; height: 180px; object-fit: cover; border-radius: 8px; }
+        .badge { background-color: #fca311; color: black; display: inline-block; padding: 5px 10px; border-radius: 15px; font-weight: bold; margin-bottom: 10px; }
+        footer { text-align: center; padding: 10px; background-color: #c1121f; margin-top: 40px; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Sakura</h1>
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="appetizers.html">Appetizers</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Chef's Recommendations</h2>
+        <div class="chef-note">
+            <p>Our head chef has handpicked these signature dishes that represent the best of Asian flavors and craftsmanship. Each dish is crafted with passion, precision, and authenticity. ⭐</p>
+        </div>
+
+        <div class="dish-grid">
+            <div class="dish">
+                <div class="badge">Chef's Pick</div>
+                <img src="images/spicytunarolls.jpg" alt="tuna roll">
+                <h3>Spicy Tuna Sushi Roll</h3>
+                <p>Fresh tuna with spicy mayo, rolled with cucumber and seaweed for the perfect balance of heat and freshness.</p>
+            </div>
+
+            <div class="dish">
+                <div class="badge">Chef's Pick</div>
+                <img src="images/salmonbowl.jpg" alt="Teriyaki Salmon Bowl">
+                <h3>Teriyaki Salmon Bowl</h3>
+                <p>Grilled salmon glazed with homemade teriyaki sauce, served on jasmine rice with vegetables.</p>
+            </div>
+
+            <div class="dish">
+                <div class="badge">Chef's Pick</div>
+                <img src="images/thai red curry chicken.jpg" alt="Thai Red Curry Chicken">
+                <h3>Thai Red Curry Chicken</h3>
+                <p>Creamy coconut red curry with tender chicken and vegetables — a comforting taste of Thailand.</p>
+            </div>
+
+            <div class="dish">
+                <div class="badge">Chef's Pick</div>
+                <img src="images/Korean bibimbap.jpg" alt="Korean Bibimbap">
+                <h3>Korean Bibimbap</h3>
+                <p>Colorful rice bowl topped with sautéed vegetables, beef, fried egg, and a drizzle of gochujang sauce.</p>
+            </div>
+
+            <div class="dish">
+                <div class="badge">Chef's Pick</div>
+                <img src="images/peking duck wrap.jpg" alt="Peking Duck Wrap">
+                <h3>Peking Duck Wrap</h3>
+                <p>Roasted duck slices wrapped in thin pancakes with scallions, cucumber, and hoisin sauce.</p>
+            </div>
+
+            <div class="dish">
+                <div class="badge">Chef's Pick</div>
+                <img src="images/Garlic butter ramen.jpg" alt="Garlic Butter Ramen">
+                <h3>Garlic Butter Ramen</h3>
+                <p>Rich ramen noodles served in a savory broth with garlic butter and soft-boiled egg for an indulgent twist.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 Sakura | All Rights Reserved</p>
+    </footer>
+</body>
+</html>
